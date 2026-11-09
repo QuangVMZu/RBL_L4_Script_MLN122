@@ -23,7 +23,7 @@
     document.querySelector('.handoff').classList.toggle('person-change',handoff);
     $('cue').textContent=s.cue;$('question').textContent=s.question;$('answer').textContent=s.answer;
     $('references').innerHTML=s.refs.length?s.refs.map(n=>{const r=data.sources[n-1];return `<a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer" title="${esc(r.title)}">[${r.n}] ${esc(r.short)} ↗</a>`;}).join(''):'<small>Báo cáo nhóm trong ZIP, các thẻ làm việc MLN2 và hướng dẫn học phần.</small>';
-    const link=`../01_Trinh_chieu/index.html#trang-${s.n}`;$('open-deck').href=link;$('preview-link').href=link;
+    const link=`../RBL_L4_Thuyet_Trinh_MLN122/index.html#trang-${s.n}`;$('open-deck').href=link;$('preview-link').href=link;
     $('slide-preview').src=`assets/trang-${String(s.n).padStart(2,'0')}.png`;$('slide-preview').alt=`Trang ${s.n}: ${s.title}`;
     $('page-counter').textContent=`${String(s.n).padStart(2,'0')} / 20`;$('prev').disabled=current===0;$('next').disabled=current===19;
     document.querySelectorAll('.group-button').forEach((b,i)=>{b.classList.toggle('active',i===s.part);b.setAttribute('aria-current',i===s.part?'step':'false');});
